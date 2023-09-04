@@ -7,3 +7,5 @@ function execute(x, func) {
     func();
   }
 }
+
+module.exports.execute = execute;
