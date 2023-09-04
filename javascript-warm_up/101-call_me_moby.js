@@ -2,10 +2,11 @@
 The function must be visible from outside
 Prototype: function (x, theFunction)*/
 
-function execute(x, func) {
-  for (let i = 0; i < x; ++i) {
-    func();
+function callMeMoby(x, theFunction) {
+  for (let i = 0; i < x; i++) {
+    theFunction();
   }
 }
 
+// Export the function to make it visible from outside
 module.exports.callMeMoby = callMeMoby;
