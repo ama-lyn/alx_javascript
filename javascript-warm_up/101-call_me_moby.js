@@ -8,4 +8,4 @@ function execute(x, func) {
   }
 }
 
-module.exports.execute = execute;
+module.exports.callMeMoby = callMeMoby;
