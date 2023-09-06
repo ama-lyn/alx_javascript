@@ -8,7 +8,7 @@ const square = require("./5-square"); // Import the Square class from 5-square.j
 
 class Square extends square {
   constructor(size) {
-    super(size); //
+    super(size);
   }
 
   charPrint(c) {
