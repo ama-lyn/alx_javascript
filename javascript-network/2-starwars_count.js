@@ -12,11 +12,14 @@ req(url, (error, response, body) => {
   if (error) {
     return console.error(error);
   }
-  const films = JSON.parse(body).results;
+
+  const data = JSON.parse(body);
+  const films = data.results;
   let count = 0;
-  const character = "https://swapi-api.alx-tools.com/api/people/18/";
-  for (const film of Object.keys(films)) {
-    if (films[film].characters.includes(character, 0)) {
+  const characterId = "18"; // Character ID for Wedge Antilles
+  const character = `https://swapi-api.alx-tools.com/api/people/${characterId}/`;
+  for (const film of films) {
+    if (films.characters.includes(character)) {
       count += 1;
     }
   }
