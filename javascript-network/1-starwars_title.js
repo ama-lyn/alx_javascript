@@ -10,9 +10,10 @@ const req = require("request");
 const ID = `${process.argv[2]}`;
 const url = `https://swapi-api.alx-tools.com/api/films/${ID}`;
 
-req(url, { json: true }, (error, response, body) => {
+req(url, (error, response, body) => {
   if (error) {
     return console.error(error);
   }
-  console.log(body.title);
+  const object = JSON.parse(body);
+  console.log(object.title);
 });
