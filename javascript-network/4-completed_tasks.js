@@ -12,6 +12,11 @@ req(url, (error, body) => {
     return console.error(error);
   }
 
+  if (response.statusCode !== 200) {
+    console.error(`Request failed with status code: ${response.statusCode}`);
+    return;
+  }
+
   const todos = JSON.parse(body);
   const completedTasks = {};
 
