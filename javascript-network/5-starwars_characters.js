@@ -25,7 +25,7 @@ if (process.argv.length > 2) {
     }
     const movies = JSON.parse(body);
     movies.characters.forEach((characterURL) => {
-      request(characterURL, (error, response, body) => {
+      req(characterURL, (error, response, body) => {
         if (error) {
           return console.error(error);
         }
