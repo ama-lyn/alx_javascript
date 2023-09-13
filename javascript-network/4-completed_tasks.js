@@ -25,4 +25,5 @@ req(url, (error, body) => {
       }
     }
   }
+  console.log(completedTasks);
 });
