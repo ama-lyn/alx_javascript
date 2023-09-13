@@ -18,10 +18,11 @@ req(url, (error, body) => {
   // Loop through the data to count completed tasks by user
   for (const todo of todos) {
     if (todo.completed) {
-      if (completedTasks[todo.userId]) {
-        completedTasks[todo.userId] += 1;
+      const userId = todo.userId.toString();
+      if (completedTasks[userId]) {
+        completedTasks[userId] += 1;
       } else {
-        completedTasks[todo.userId] = 1;
+        completedTasks[userId] = 1;
       }
     }
   }
