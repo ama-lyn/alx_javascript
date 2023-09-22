@@ -40,6 +40,11 @@
 
         // Function to display the cart
         function displayCart() {
+          // Remove the existing message
+          const existingMessage = document.getElementById("cartMessage");
+          if (existingMessage) {
+            existingMessage.remove();
+          }
           const cartItems = Object.keys(localStorage);
 
           if (cartItems.length > 0) {
