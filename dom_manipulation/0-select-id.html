@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DOM Introduction</title>
+  </head>
+  <body>
+    <p id="myParagraph">This is a paragraph.</p>
+    <script>
+      // Get the element with ID "myParagraph"
+      var newParagraph = document.getElementById("myParagraph");
+      // Change its content to "Hello World!"
+      // Note that we can't use innerHTML here because it will remove all child elements of this node, including our span tag!
+      // Note that this changes only what's inside of it, not including any tags or attributes!
+      // This means you can change text in an HTML page without having to know how to write HTML code yourself
+      // This means you can change text and HTML at once:
+      // 1) Set innerHTML (this will erase all child nodes!)
+      //   2a) setTextContent() - sets just the node value without erasing children
+      //   2b) appendChild(document.createTextNode()) - adds new TextNode as last child
+      //        console.log('before', newParagraph);
+      //         newParagraph.innerHTML = "<strong><em>Hello world!</em></strong>";
+      //         newParagraph.appendChild(document.createElement("br"));
+      newParagraph.textContent =
+        "I successfully updated this paragraph with javascript";
+    </script>
+  </body>
+</html>
